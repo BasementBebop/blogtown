@@ -1,8 +1,10 @@
 mixin articleCard(article = {})
-    .store
-        .store__hero
-            img(src=`/uploads/${article.photo || 'store.png'}`)
-            h2.title
+    .col.s12.m6.l4.xl3
+        .card 
+            .card-image
+                img(src=`/uploads/${article.photo || 'store.png'}`)
+                span.card-title= article.title
+            .card-content
+                p= article.body.split(' ').slice(0, 25).join(' ')
+            .card-action
                 a(href=`/article/${article.slug}`) #{article.title}
-        .store__details
-            p= article.body.split(' ').slice(0, 25).join(' ')

@@ -6,6 +6,7 @@ include mixins/_articleCard
 block content
     .inner
         h2= title
-        .stores
-            each article in articles
-                +articleCard(article)
+        .container
+            .row
+                each article in articles
+                    +articleCard(article)
