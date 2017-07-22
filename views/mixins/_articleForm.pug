@@ -1,9 +1,9 @@
-mixin storeForm(store = {})
+mixin articleForm(article = {})
     form(action="/add" method="POST" class="card")
-        label(for="name") Name
-        input(type="text" name="name")
-        label(for="description") Description
-        textarea(name="description")
+        label(for="title") Title
+        input(type="text" name="title")
+        label(for="body") Body
+        textarea(name="body")
         - const choices = ['Wifi', 'Open Late', 'Family Friendly', 'Vegatarian', 'Licensed']
         ul.tags
             each choice in choices

@@ -21,7 +21,7 @@ exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 exports.siteName = `blogtown beta`;
 
 exports.menu = [
-  { slug: '/b', title: 'Stores', icon: 'store', },
+  { slug: '/articles', title: 'Stores', icon: 'store', },
   { slug: '/tags', title: 'Tags', icon: 'tag', },
   { slug: '/top', title: 'Top', icon: 'top', },
   { slug: '/add', title: 'Add', icon: 'add', },

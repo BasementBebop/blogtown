@@ -1,0 +1,8 @@
+mixin articleCard(article = {})
+    .store
+        .store__hero
+            img(src=`/uploads/${article.photo || 'store.png'}`)
+            h2.title
+                a(href=`/article/${article.slug}`) #{article.title}
+        .store__details
+            p= article.body.split(' ').slice(0, 25).join(' ')
